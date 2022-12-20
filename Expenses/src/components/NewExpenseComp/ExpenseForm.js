@@ -6,6 +6,10 @@ const ExpenseForm = (props) => {
   //   const [entetedAmount, setEnteredAmount] = useState("");
   //   const [enteredDate, setEnteredDate] = useState("");
 
+  const cancelForm = () => {
+    props.onCancel();
+  };
+
   const [userInput, setUserInput] = useState({
     enteredTitle: "",
     enteredAmount: "",
@@ -82,6 +86,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button onClick={cancelForm} type="button">
+          Cancel{" "}
+        </button>
         <button type="submit">Submit</button>
       </div>
     </form>
