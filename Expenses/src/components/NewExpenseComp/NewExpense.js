@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Wrapper from "../Helpers/Wrapper";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
