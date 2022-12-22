@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Wrapper from "../Helpers/Wrapper";
+import Button from "../Common/Button";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
 
@@ -27,7 +27,11 @@ const NewExpense = (props) => {
           onSaveExpenseData={saveExpenseDataHandler}
         />
       ) : (
-        <button onClick={showFormHandler}>Add New Expense</button>
+        <Button
+          type="button"
+          onClick={showFormHandler}
+          btnLabel="Add New Expense"
+        />
       )}
     </div>
   );

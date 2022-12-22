@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Button from "../Common/Button";
 import "./ExpenseForm.css";
 
 const ExpenseForm = (props) => {
@@ -43,10 +44,8 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button onClick={cancelForm} type="button">
-          Cancel{" "}
-        </button>
-        <button type="submit">Submit</button>
+        <Button onClick={cancelForm} type="button" btnLabel="Cancel" />
+        <Button type="submit" btnLabel="Submit" />
       </div>
     </form>
   );
