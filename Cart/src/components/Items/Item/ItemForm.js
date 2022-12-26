@@ -4,25 +4,27 @@ import { useRef, useState } from "react";
 
 const ItemForm = (props) => {
   const [amountValid, setAmountValid] = useState(true);
-  const amoutInputRef = useRef();
+  const quantityInputRef = useRef();
   const addItemHandler = (event) => {
     event.preventDefault();
-    const enteredAmount = amoutInputRef.current.value;
-    const enterAmountNumber = +enteredAmount;
+    const enteredQuantity = quantityInputRef.current.value;
+
+    const enterQuantityNumber = +enteredQuantity;
+
     if (
-      enteredAmount.trim().length === 0 ||
-      enterAmountNumber < 1 ||
-      enterAmountNumber > 5
+      enteredQuantity.trim().length === 0 ||
+      enterQuantityNumber < 1 ||
+      enterQuantityNumber > 5
     ) {
       setAmountValid(false);
       return;
     }
-    props.onAddToCart(enterAmountNumber);
+    props.onAddToCart(enterQuantityNumber);
   };
   return (
     <form onSubmit={addItemHandler} className={styles.form}>
       <Input
-        ref={amoutInputRef}
+        ref={quantityInputRef}
         id={props.item.id}
         label="Quantity"
         input={{
