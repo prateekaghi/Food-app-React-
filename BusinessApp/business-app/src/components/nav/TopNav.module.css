@@ -1,0 +1,21 @@
+.topnav {
+  background-color: rgb(78, 77, 77);
+  font-size: large;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+
+.main_container {
+  margin: 10px;
+}
+.profile {
+  display: flex;
+}
+.activelink {
+  text-decoration: none;
+  font-style: oblique;
+  color: blue;
+}
